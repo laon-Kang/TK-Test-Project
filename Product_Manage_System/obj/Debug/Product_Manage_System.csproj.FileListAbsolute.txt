@@ -1,0 +1,29 @@
+C:\Users\Simon\Desktop\SIM-PROJECT\Turck Team Project\C Sharp Project\Turck Korea Product Management System\Product_Manage_System\bin\Debug\Product_Manage_System.exe.config
+C:\Users\Simon\Desktop\SIM-PROJECT\Turck Team Project\C Sharp Project\Turck Korea Product Management System\Product_Manage_System\bin\Debug\Product_Manage_System.exe
+C:\Users\Simon\Desktop\SIM-PROJECT\Turck Team Project\C Sharp Project\Turck Korea Product Management System\Product_Manage_System\bin\Debug\Product_Manage_System.pdb
+C:\Users\Simon\Desktop\SIM-PROJECT\Turck Team Project\C Sharp Project\Turck Korea Product Management System\Product_Manage_System\obj\Debug\Product_Manage_System.csprojResolveAssemblyReference.cache
+C:\Users\Simon\Desktop\SIM-PROJECT\Turck Team Project\C Sharp Project\Turck Korea Product Management System\Product_Manage_System\obj\Debug\Product_Manage_System.FormLogin.resources
+C:\Users\Simon\Desktop\SIM-PROJECT\Turck Team Project\C Sharp Project\Turck Korea Product Management System\Product_Manage_System\obj\Debug\Product_Manage_System.Properties.Resources.resources
+C:\Users\Simon\Desktop\SIM-PROJECT\Turck Team Project\C Sharp Project\Turck Korea Product Management System\Product_Manage_System\obj\Debug\Product_Manage_System.csproj.GenerateResource.Cache
+C:\Users\Simon\Desktop\SIM-PROJECT\Turck Team Project\C Sharp Project\Turck Korea Product Management System\Product_Manage_System\obj\Debug\Product_Manage_System.exe
+C:\Users\Simon\Desktop\SIM-PROJECT\Turck Team Project\C Sharp Project\Turck Korea Product Management System\Product_Manage_System\obj\Debug\Product_Manage_System.pdb
+C:\Users\Simon\Desktop\SIM-PROJECT\Turck Team Project\C Sharp Project\Turck Korea Product Management System\Product_Manage_System\obj\Debug\Product_Manage_System.FormMSG.resources
+C:\Users\Simon\Desktop\SIM-PROJECT\Turck Team Project\C Sharp Project\Turck Korea Product Management System\Product_Manage_System\obj\Debug\Product_Manage_System.FormRental.resources
+C:\Users\Simon\Desktop\SIM-PROJECT\Turck Team Project\C Sharp Project\Turck Korea Product Management System\Product_Manage_System\obj\Debug\Product_Manage_System.FormMain.resources
+C:\Users\Simon\Desktop\SIM-PROJECT\Turck Team Project\C Sharp Project\Turck Korea Product Management System\Product_Manage_System\obj\Debug\Product_Manage_System.FormReturn.resources
+C:\Users\Simon\Desktop\SIM-PROJECT\Turck Team Project\C Sharp Project\Turck Korea Product Management System\Product_Manage_System\obj\Debug\Product_Manage_System.FormHistory.resources
+C:\Users\Laon\Documents\재고 관리 시스템\Turck Korea Product Management System 2017-1-17\Product_Manage_System\bin\Debug\Product_Manage_System.exe.config
+C:\Users\Laon\Documents\재고 관리 시스템\Turck Korea Product Management System 2017-1-17\Product_Manage_System\bin\Debug\Product_Manage_System.exe
+C:\Users\Laon\Documents\재고 관리 시스템\Turck Korea Product Management System 2017-1-17\Product_Manage_System\bin\Debug\Product_Manage_System.pdb
+C:\Users\Laon\Documents\재고 관리 시스템\Turck Korea Product Management System 2017-1-17\Product_Manage_System\bin\Debug\MySql.Data.dll
+C:\Users\Laon\Documents\재고 관리 시스템\Turck Korea Product Management System 2017-1-17\Product_Manage_System\obj\Debug\Product_Manage_System.csprojResolveAssemblyReference.cache
+C:\Users\Laon\Documents\재고 관리 시스템\Turck Korea Product Management System 2017-1-17\Product_Manage_System\obj\Debug\Product_Manage_System.FormHistory.resources
+C:\Users\Laon\Documents\재고 관리 시스템\Turck Korea Product Management System 2017-1-17\Product_Manage_System\obj\Debug\Product_Manage_System.FormMain.resources
+C:\Users\Laon\Documents\재고 관리 시스템\Turck Korea Product Management System 2017-1-17\Product_Manage_System\obj\Debug\Product_Manage_System.FormMSG.resources
+C:\Users\Laon\Documents\재고 관리 시스템\Turck Korea Product Management System 2017-1-17\Product_Manage_System\obj\Debug\Product_Manage_System.FormLogin.resources
+C:\Users\Laon\Documents\재고 관리 시스템\Turck Korea Product Management System 2017-1-17\Product_Manage_System\obj\Debug\Product_Manage_System.FormRental.resources
+C:\Users\Laon\Documents\재고 관리 시스템\Turck Korea Product Management System 2017-1-17\Product_Manage_System\obj\Debug\Product_Manage_System.FormReturn.resources
+C:\Users\Laon\Documents\재고 관리 시스템\Turck Korea Product Management System 2017-1-17\Product_Manage_System\obj\Debug\Product_Manage_System.Properties.Resources.resources
+C:\Users\Laon\Documents\재고 관리 시스템\Turck Korea Product Management System 2017-1-17\Product_Manage_System\obj\Debug\Product_Manage_System.csproj.GenerateResource.Cache
+C:\Users\Laon\Documents\재고 관리 시스템\Turck Korea Product Management System 2017-1-17\Product_Manage_System\obj\Debug\Product_Manage_System.exe
+C:\Users\Laon\Documents\재고 관리 시스템\Turck Korea Product Management System 2017-1-17\Product_Manage_System\obj\Debug\Product_Manage_System.pdb
