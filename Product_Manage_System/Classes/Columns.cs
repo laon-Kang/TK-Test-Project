@@ -14,7 +14,8 @@ namespace Product_Manage_System
         public const string TB_COMPANY_INFO = "TB_COMPANY_INFO";
         public const string TB_PRODUCT_INFO = "TB_PRODUCT_INFO";
         public const string TB_PRODUCT_HISTORY = "TB_PRODUCT_HISTORY";
-
+        public const string TB_BOX_INFO = "TB_BOX_INFO";
+        public const string TB_BOX_SERIAL_NO = "TB_BOX_SERIAL_NO";
     }
 
     class RESULT
@@ -22,6 +23,18 @@ namespace Product_Manage_System
         public const string PASS = "True";
         public const string FAIL = "False";
     }
+
+    /// <summary>
+    /// 이상현
+    /// </summary>
+    class PRODUCT_TYPE
+    {
+        public const string PROPERTY_TYPE_CODE = "PROPERTY_TYPE_CODE";
+        public const string PROPERTY_PURPOSE_CODE = "PROPERTY_PURPOSE_CODE";
+        public const string COMPANY_CODE = "COMPANY_CODE";
+        public const string COMPETENCY_CODE = "COMPETENCY_CODE";
+    }
+
 
     class COLUMNS
     {
@@ -85,49 +98,7 @@ namespace Product_Manage_System
             public const string UPDATE_DATE = "UPDATE_DATE";
             public const string USE_YN_CODE = "USE_YN_CODE";
         }
-        /*
-        public struct TB_PRODUCT_INFO
-        {
-            public const string IDENT_NUMBER = "IDENT_NUMBER";
-            public const string PRODUCT_NAME = "PRODUCT_NAME";
-            public const string PROPERTY_TYPE_CODE = "PROPERTY_TYPE_CODE";
-            public const string PROPERTY_PURPOSE_CODE = "PROPERTY_PURPOSE_CODE";
-            public const string COMPANY_CODE = "COMPANY_CODE";
-            public const string COMPETENCY_CODE = "COMPETENCY_CODE";
-            public const string TOTAL_PRODUCT_COUNT = "TOTAL_PRODUCT_COUNT";
-            public const string RENTAL_PRODUCT_COUNT = "RENTAL_PRODUCT_COUNT";
-            public const string SAMPLE_RENTAL_PRODUCT_COUNT = "SAMPLE_RENTAL_PRODUCT_COUNT";
-            public const string DISUSE_PRODUCT_COUNT = "DISUSE_PRODUCT_COUNT";
-            public const string CREATE_BY = "CREATE_BY";
-            public const string CREATE_DATE = "CREATE_DATE";
-            public const string UPDATE_BY = "UPDATE_BY";
-            public const string UPDATE_DATE = "UPDATE_DATE";
-            public const string USE_YN = "USE_YN";
-        }
-        */
-        /*
-        public struct TB_PRODUCT_HISTORY
-        {
-            public const string IDENT_NUMBER = "IDENT_NUMBER";
-            public const string PRODUCT_NAME = "PRODUCT_NAME";
-            public const string PROPERTY_TYPE_CODE = "PROPERTY_TYPE_CODE";
-            public const string PROPERTY_PURPOSE_CODE = "PROPERTY_PURPOSE_CODE";
-            public const string COMPANY_CODE = "COMPANY_CODE";
-            public const string COMPETENCY_CODE = "COMPETENCY_CODE";
-            public const string PRODUCT_COUNT = "PRODUCT_COUNT";
-            public const string USER_ID = "USER_ID";
-            public const string PRODUCT_RENTAL_TIME = "PRODUCT_RENTAL_TIME";
-            public const string PRODUCT_RETURN_TIME = "PRODUCT_RETURN_TIME";
-            public const string PRODUCT_SAMPLE_RENTAL_TIME = "PRODUCT_SAMPLE_RENTAL_TIME";
-            public const string PRODUCT_SAMPLE_RETURN_TIME = "PRODUCT_SAMPLE_RETURN_TIME";
-            public const string PRODUCT_STATUS = "PRODUCT_STATUS";
-            public const string CREATE_BY = "CREATE_BY";
-            public const string CREATE_DATE = "CREATE_DATE";
-            public const string UPDATE_BY = "UPDATE_BY";
-            public const string UPDATE_DATE = "UPDATE_DATE";
-            public const string USE_YN = "USE_YN";
-        }
-        */
+        
         // SIMON Login DataTable
         public struct TB_USER_INFO_ROLE_JOIN
         {
@@ -162,6 +133,10 @@ namespace Product_Manage_System
             public const string COMPANY_NAME = "COMPANY_NAME";
             public const string COMPETENCY_CODE = "COMPETENCY_CODE";
             public const string COMPETENCY_NAME = "COMPETENCY_NAME";
+            public const string BOX_NAME = "BOX_NAME";
+            public const string BOX_NUMBER = "BOX_NUMBER";
+            public const string BOX_COMPETENCY_CODE = "BOX_COMPETENCY_CODE";
+            public const string BOX_COMPETENCY_NAME = "BOX_COMPETENCY_NAME";
             public const string CREATE_BY = "CREATE_BY";
             public const string CREATE_DATE = "CREATE_DATE";
             public const string UPDATE_BY = "UPDATE_BY";
@@ -191,9 +166,22 @@ namespace Product_Manage_System
             public const string PRODUCT_SAMPLE_RETURN_TIME = "PRODUCT_SAMPLE_RETURN_TIME";
             public const string PRODUCT_STATUS_CODE = "PRODUCT_STATUS_CODE";
             public const string PRODUCT_STATUS_NAME = "PRODUCT_STATUS_NAME";
+            public const string BOX_NAME = "BOX_NAME";      // 박스이름 대한 정보 입력 ( 17.1.20) 
+            public const string BOX_NUMBER = "BOX_NUMBER";  // 박스번호 대한 정보 입력 ( 17.1.20) 
             public const string USE_YN = "USE_YN";
+            
         }
 
+        public struct TB_BOX_INFO
+        {
+            public const string BOX_NUMBER = "BOX_NUMBER";
+            public const string BOX_NAME = "BOX_NAME";
+            public const string BOX_COMPETENCY = "BOX_COMPETENCY";
+        }
+        public struct TB_BOX_SERIAL_NO
+        {
+            public const string BOX_SERIAL_NO = "BOX_SERIAL_NO";
+        }
         public struct CONFIG
         {
             public const string SERVER_URL = "SERVER_URL";
@@ -239,6 +227,11 @@ namespace Product_Manage_System
             public const string HANDSCANNER_DATA = "HANDSCANNER_DATA";
             public const string HANDSCANNER_PARITY = "HANDSCANNER_PARITY";
             public const string HANDSCANNER_STOP = "HANDSCANNER_STOP";
+
+            /// <summary>
+            /// 이상현
+            /// </summary>
+            public const string LABEL_PRINTER_NAME = "LABEL_PRINTER_NAME";
         }
     }
 }

@@ -84,17 +84,14 @@ namespace Product_Manage_System
                 {
                     if (dtUser.Rows.Count > 0)
                     {
-                        Common.strUserName = dtUser.Rows[0][COLUMNS.TB_USER_INFO_ROLE_JOIN.USER_NAME].ToString();
+                        Common.strUSER_NAME = dtUser.Rows[0][COLUMNS.TB_USER_INFO_ROLE_JOIN.USER_NAME].ToString();
+                        Common.strUSER_ID = dtUser.Rows[0][COLUMNS.TB_USER_INFO_ROLE_JOIN.USER_ID].ToString();
+                        Common.strAUTHORITY_CODE = dtUser.Rows[0][COLUMNS.TB_USER_INFO_ROLE_JOIN.AUTHORITY_CODE].ToString();
+                        Common.strMENU_NAME = "LMRental";
 
                         this.Hide();
 
                         FormMain formMain = new FormMain();
-
-                        formMain.tbUserId.Text = dtUser.Rows[0][COLUMNS.TB_USER_INFO_ROLE_JOIN.USER_ID].ToString();
-                        formMain.tbAuthorityCode.Text = dtUser.Rows[0][COLUMNS.TB_USER_INFO_ROLE_JOIN.AUTHORITY_CODE].ToString();
-                        formMain.tbMenuName.Text = "LMRental";
-                        formMain.lbUserName.Text = dtUser.Rows[0][COLUMNS.TB_USER_INFO_ROLE_JOIN.USER_NAME].ToString();
-                        
 
                         formMain.ShowDialog();
 
@@ -129,7 +126,7 @@ namespace Product_Manage_System
         {
             if (e.KeyCode == Keys.Enter)
             {
-                btnLoginOk.PerformClick();
+                LoginBtn.PerformClick();
             }
         }
         
@@ -171,12 +168,18 @@ namespace Product_Manage_System
         // 로그인 버튼 이미지 변경
         private void loginOk_MouseHover(object sender, EventArgs e)
         {
-            ButtonImageChange("LoginBtn", "Hover");
+            Button button = (Button)sender;
+            string buttonName = button.Name;
+
+            Common.SetButtonImage(button, buttonName, "Hover");
         }
 
         private void loginOk_MouseLeave(object sender, EventArgs e)
         {
-            ButtonImageChange("LoginBtn", "Leave");
+            Button button = (Button)sender;
+            string buttonName = button.Name;
+
+            Common.SetButtonImage(button, buttonName, "Leave");
         }
 
         // 닫기 버튼 이미지 변경

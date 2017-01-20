@@ -17,7 +17,7 @@ namespace Product_Manage_System
     class SerialComMan : SerialClientInterface
     {
         private SerialPort com;
-        private string portName = "COM6";
+        private string portName = "COM5";
         private Parity parity = Parity.None;
         private int baudRate = 9600;
         private StopBits stopBits = StopBits.One;

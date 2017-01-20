@@ -9,14 +9,14 @@ using System.Threading;
 using System.Windows.Forms;
 using System.IO.Ports;
 using DEFINES;
-using Product_Manage_System.Classes;
+using Product_Manage_System;
 
 namespace Product_Manage_System
 {
     public partial class FormReturn : Form
     {
         private TurckBarcodeData _barcodedata;
-
+        private bool isBoxScan = false; 
         public FormReturn()
         {
             InitializeComponent();
@@ -37,7 +37,7 @@ namespace Product_Manage_System
             }
             catch (Exception ex)
             {
-                FormMSG msgEx2 = new FormMSG(ex.Message, true);
+                FormMSG msgEx2 = new FormMSG(ex.Message, MsgBoxLevel.MSG_OK);
                 msgEx2.ShowDialog();
             }
         }
@@ -76,40 +76,17 @@ namespace Product_Manage_System
                     rowItem.Cells[8].Value = row[COLUMNS.TB_PRODUCT_INFO.IDENT_NUMBER].ToString();
                     rowItem.Cells[9].Value = row[COLUMNS.TB_PRODUCT_INFO.PRODUCT_CODE].ToString();
                     rowItem.Cells[10].Value = row[COLUMNS.TB_PRODUCT_INFO.PRODUCT_NAME].ToString();
-
+                    rowItem.Cells[11].Value = row[COLUMNS.TB_PRODUCT_INFO.BOX_NAME].ToString();
+                    rowItem.Cells[12].Value = row[COLUMNS.TB_PRODUCT_INFO.BOX_NUMBER].ToString();
                     rowItem.Tag = row;
 
                     dgListInfo.Rows.Add(rowItem);
                 }
-
-                //if ( dgListInfo.RowCount > 0 )
-                //{
-                //    string msg = string.Empty;
-
-                //    if(tbProductName.Text.Length > 0)
-                //    {
-                //        msg += "제품명 : " + tbProductName.Text;
-                //    }
-
-                //    if (tbProductCode.Text.Length > 0)
-                //    {
-                //        msg += "제품코드 : " + tbProductCode.Text;
-                //    }
-
-                //    if (tbProductName.Text.Length > 0 || tbProductCode.Text.Length > 0)
-                //    {
-                //        msg += "의 ";
-                //    }
-
-                //    this.tbMessage.ForeColor = Color.Green;
-                //    this.tbMessage.Text = "데모목록 조회가 정상처리 되었습니다.";
-
-                //    this.stIco.BackgroundImage = Image.FromFile(@"Image\\stIcoGreen.jpg");
-                //}
             }
-            
+
+           
             // Product History 조회
-            if (DBMan.SelectProductRentalList(tbProductName.Text, tbProductCode.Text, tbUserId.Text, "", tbInputIdentNumber.Text, false, false, out dtList))
+            if (DBMan.SelectProductRentalList(tbProductName.Text, tbProductCode.Text, Common.strUSER_ID, "", tbInputIdentNumber.Text, false, false, out dtList))
             {
                 dgListUser.Rows.Clear();
 
@@ -129,14 +106,17 @@ namespace Product_Manage_System
                     rowItem.Cells[8].Value = row[COLUMNS.TB_PRODUCT_HISTORY.IDENT_NUMBER].ToString();
                     rowItem.Cells[9].Value = row[COLUMNS.TB_PRODUCT_HISTORY.PRODUCT_CODE].ToString();
                     rowItem.Cells[10].Value = row[COLUMNS.TB_PRODUCT_HISTORY.PRODUCT_NAME].ToString();
-                    rowItem.Cells[11].Value = row[COLUMNS.TB_PRODUCT_HISTORY.PRODUCT_RENTAL_TIME].ToString();
-                    rowItem.Cells[12].Value = row[COLUMNS.TB_PRODUCT_HISTORY.NOTE].ToString();
+                    rowItem.Cells[11].Value = row[COLUMNS.TB_PRODUCT_HISTORY.BOX_NAME].ToString();
+                    rowItem.Cells[12].Value = row[COLUMNS.TB_PRODUCT_HISTORY.BOX_NUMBER].ToString();
+                    rowItem.Cells[13].Value = row[COLUMNS.TB_PRODUCT_HISTORY.PRODUCT_RENTAL_TIME].ToString();
+                    rowItem.Cells[14].Value = row[COLUMNS.TB_PRODUCT_HISTORY.NOTE].ToString();
 
                     rowItem.Tag = row;
 
                     dgListUser.Rows.Add(rowItem);
                 }
             }
+           
         }
 
         // 조회버튼 클릭 이벤트
@@ -210,17 +190,26 @@ namespace Product_Manage_System
             dt.Columns.Add(COLUMNS.TB_PRODUCT_INFO.COMPETENCY_CODE);
             dt.Columns.Add(COLUMNS.TB_PRODUCT_INFO.COMPETENCY_NAME);
             dt.Columns.Add(COLUMNS.TB_PRODUCT_INFO.USE_YN);
+
+            dt.Columns.Add(COLUMNS.TB_PRODUCT_INFO.BOX_NUMBER);
+            dt.Columns.Add(COLUMNS.TB_PRODUCT_INFO.BOX_NAME);
+
+           
+
+/*
+            UPDATE tb_product_info 
+SET BOX_NAME = ( SELECT BOX_NAME FROM tb_box_info where BOX_NUMBER = 'BOX-000101' )
+WHERE BOX_NUMBER =  'BOX-000101';       */
+
             DataRow rowProduct = dt.NewRow();
 
-            // ident number , product code, product name 
             rowProduct[COLUMNS.TB_PRODUCT_INFO.IDENT_NUMBER] = dr.Cells[8].Value.ToString();
             rowProduct[COLUMNS.TB_PRODUCT_INFO.PRODUCT_CODE] = dr.Cells[9].Value.ToString();
             rowProduct[COLUMNS.TB_PRODUCT_INFO.PRODUCT_NAME] = dr.Cells[10].Value.ToString();
-            // rowProduct[COLUMNS.TB_PRODUCT_INFO.USE_YN] = 1;
-
+            rowProduct[COLUMNS.TB_PRODUCT_INFO.BOX_NAME] = dr.Cells[11].Value.ToString(); // 바코드로 찍은 박스 네임을 넣는다.
+            rowProduct[COLUMNS.TB_PRODUCT_INFO.BOX_NUMBER] = "BOX-"+_barcodedata.GetBoxIdentNumber().ToString(); // 바코드로 찍은 박스 네임을 넣는다.
             if (DBMan.ReturnProductInfo(rowProduct))
             {
-                //btnCancel.PerformClick();
                 setDataGridView();
             }
             else
@@ -334,17 +323,20 @@ namespace Product_Manage_System
 
         private void RecevieScanData(string data)
         {
-            string strTemp = "F-D-T-PS-000002-2578112";
-            _barcodedata.SetData(strTemp);
-            if (_barcodedata.Decodable())
+            int dataType;
+            _barcodedata.SetData(data);
+            dataType = _barcodedata.GetBarcodeDataType();
+            if (_barcodedata.Decodable(dataType))
             {
-                _barcodedata.Decode();
+                _barcodedata.Decode(dataType);
+                if (dataType == Constants.BOX_BARCODE) isBoxScan = true;
             }
-            
-            if (tbInputProductCode.Text == _barcodedata.GetProductCode())
+            // && (tbInputIdentNumber.Text == _barcodedata.GetIdentNumber()) &&
+            if (tbInputProductCode.Text == _barcodedata.GetProductCode() && isBoxScan == true)
             {
                 ReturnProduct();
                 Clear_Product_InputData();
+                isBoxScan = false;
             }
             else
             {
@@ -379,7 +371,7 @@ namespace Product_Manage_System
             }
             catch (Exception ex)
             {
-                FormMSG msgEx2 = new FormMSG(ex.Message, true);
+                FormMSG msgEx2 = new FormMSG(ex.Message, MsgBoxLevel.MSG_OK);
                 msgEx2.ShowDialog();
             }
         }

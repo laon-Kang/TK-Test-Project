@@ -132,5 +132,14 @@ namespace Product_Manage_System
                 throw new Exception("SCANNER CLOSE ERROR : " + ex.Message);
             }
         }
+
+        /// <summary>
+        /// 이상현
+        /// </summary>
+        public static string LABEL_PRINTER_NAME
+        {
+            get { return dsConfig.Tables[0].Rows[0][COLUMNS.CONFIG.LABEL_PRINTER_NAME].ToString(); }
+            set { dsConfig.Tables[0].Rows[0][COLUMNS.CONFIG.LABEL_PRINTER_NAME] = value; }
+        }
     }
 }

@@ -37,11 +37,11 @@ namespace Product_Manage_System
             {
                 setDataGridView(false);
             }
-            else 
+            else
             {
                 setDataGridView(true);
             }
-            
+
         }
 
         // 검색버튼 실행 이벤트
@@ -144,7 +144,9 @@ namespace Product_Manage_System
                         rowItem.Cells[9].Value = row[COLUMNS.TB_PRODUCT_HISTORY.PRODUCT_CODE].ToString();
                         rowItem.Cells[10].Value = row[COLUMNS.TB_PRODUCT_HISTORY.PRODUCT_NAME].ToString();
                         rowItem.Cells[11].Value = row[COLUMNS.TB_PRODUCT_HISTORY.PRODUCT_RENTAL_TIME].ToString();
-                        rowItem.Cells[12].Value = row[COLUMNS.TB_PRODUCT_HISTORY.NOTE].ToString();
+                        rowItem.Cells[12].Value = row[COLUMNS.TB_PRODUCT_HISTORY.BOX_NUMBER].ToString();
+                        rowItem.Cells[13].Value = row[COLUMNS.TB_PRODUCT_HISTORY.BOX_NAME].ToString();
+                        rowItem.Cells[14].Value = row[COLUMNS.TB_PRODUCT_HISTORY.NOTE].ToString();
 
                         rowItem.Tag = row;
 
@@ -174,7 +176,9 @@ namespace Product_Manage_System
                         rowItem.Cells[9].Value = row[COLUMNS.TB_PRODUCT_HISTORY.PRODUCT_CODE].ToString();
                         rowItem.Cells[10].Value = row[COLUMNS.TB_PRODUCT_HISTORY.PRODUCT_NAME].ToString();
                         rowItem.Cells[11].Value = row[COLUMNS.TB_PRODUCT_HISTORY.PRODUCT_RENTAL_TIME].ToString();
-                        rowItem.Cells[12].Value = row[COLUMNS.TB_PRODUCT_HISTORY.NOTE].ToString();
+                        rowItem.Cells[12].Value = row[COLUMNS.TB_PRODUCT_HISTORY.BOX_NUMBER].ToString();
+                        rowItem.Cells[13].Value = row[COLUMNS.TB_PRODUCT_HISTORY.BOX_NAME].ToString();
+                        rowItem.Cells[14].Value = row[COLUMNS.TB_PRODUCT_HISTORY.NOTE].ToString();
 
                         rowItem.Tag = row;
 
@@ -207,19 +211,22 @@ namespace Product_Manage_System
                         rowItem.Cells[10].Value = row[COLUMNS.TB_PRODUCT_HISTORY.PRODUCT_NAME].ToString();
                         rowItem.Cells[11].Value = row[COLUMNS.TB_PRODUCT_HISTORY.PRODUCT_STATUS_CODE].ToString();
                         rowItem.Cells[12].Value = row[COLUMNS.TB_PRODUCT_HISTORY.PRODUCT_STATUS_NAME].ToString();
-                        
+
                         if (row[COLUMNS.TB_PRODUCT_HISTORY.PRODUCT_STATUS_CODE].ToString() == "RT" || row[COLUMNS.TB_PRODUCT_HISTORY.PRODUCT_STATUS_CODE].ToString() == "RE")
                         {
                             rowItem.Cells[13].Value = row[COLUMNS.TB_PRODUCT_HISTORY.PRODUCT_RENTAL_TIME].ToString();
                             rowItem.Cells[14].Value = row[COLUMNS.TB_PRODUCT_HISTORY.PRODUCT_RETURN_TIME].ToString();
                         }
-                        else 
+                        else
                         {
                             rowItem.Cells[13].Value = row[COLUMNS.TB_PRODUCT_HISTORY.PRODUCT_SAMPLE_RENTAL_TIME].ToString();
                             rowItem.Cells[14].Value = row[COLUMNS.TB_PRODUCT_HISTORY.PRODUCT_SAMPLE_RETURN_TIME].ToString();
-                        }                    
-                        
-                        rowItem.Cells[15].Value = row[COLUMNS.TB_PRODUCT_HISTORY.NOTE].ToString();
+                        }
+
+
+                        rowItem.Cells[15].Value = row[COLUMNS.TB_PRODUCT_HISTORY.BOX_NUMBER].ToString();
+                        rowItem.Cells[16].Value = row[COLUMNS.TB_PRODUCT_HISTORY.BOX_NAME].ToString();
+                        rowItem.Cells[17].Value = row[COLUMNS.TB_PRODUCT_HISTORY.NOTE].ToString();
 
                         rowItem.Tag = row;
 

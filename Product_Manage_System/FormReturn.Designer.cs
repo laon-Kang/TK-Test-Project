@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormReturn));
             this.tbMessage = new System.Windows.Forms.TextBox();
-            this.tbUserId = new System.Windows.Forms.TextBox();
             this.tbInputIdentNumber = new System.Windows.Forms.TextBox();
             this.tbInputCompetencyCode = new System.Windows.Forms.TextBox();
             this.tbInputCompanyCode = new System.Windows.Forms.TextBox();
@@ -47,6 +46,13 @@
             this.CancelBtn = new System.Windows.Forms.Button();
             this.ReturnBtn = new System.Windows.Forms.Button();
             this.dgListUser = new System.Windows.Forms.DataGridView();
+            this.dgListInfo = new System.Windows.Forms.DataGridView();
+            this.SearchBtn = new System.Windows.Forms.Button();
+            this.tbProductCode = new System.Windows.Forms.TextBox();
+            this.tbProductName = new System.Windows.Forms.TextBox();
+            this.tbReturnDate = new System.Windows.Forms.TextBox();
+            this.barcodeSerialPort = new System.IO.Ports.SerialPort(this.components);
+            this.stIco = new System.Windows.Forms.Button();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -58,9 +64,10 @@
             this.aa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.박스명 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.박스번호 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgListInfo = new System.Windows.Forms.DataGridView();
             this.PROPERTY_TYPE_NAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PROPERTY_TYPE_CODE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PROPERTY_PURPOSE_NAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -72,12 +79,8 @@
             this.제품고유번호 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IDENT_NUMBER = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PRODUCT_NAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SearchBtn = new System.Windows.Forms.Button();
-            this.tbProductCode = new System.Windows.Forms.TextBox();
-            this.tbProductName = new System.Windows.Forms.TextBox();
-            this.tbReturnDate = new System.Windows.Forms.TextBox();
-            this.barcodeSerialPort = new System.IO.Ports.SerialPort(this.components);
-            this.stIco = new System.Windows.Forms.Button();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgListUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgListInfo)).BeginInit();
             this.SuspendLayout();
@@ -86,28 +89,20 @@
             // 
             this.tbMessage.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbMessage.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.tbMessage.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.tbMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.tbMessage.ForeColor = System.Drawing.Color.Black;
             this.tbMessage.Location = new System.Drawing.Point(55, 584);
             this.tbMessage.Name = "tbMessage";
             this.tbMessage.ReadOnly = true;
-            this.tbMessage.Size = new System.Drawing.Size(812, 15);
+            this.tbMessage.Size = new System.Drawing.Size(812, 19);
             this.tbMessage.TabIndex = 63;
             this.tbMessage.TabStop = false;
-            // 
-            // tbUserId
-            // 
-            this.tbUserId.Location = new System.Drawing.Point(27, 11);
-            this.tbUserId.Name = "tbUserId";
-            this.tbUserId.Size = new System.Drawing.Size(100, 21);
-            this.tbUserId.TabIndex = 62;
-            this.tbUserId.Visible = false;
             // 
             // tbInputIdentNumber
             // 
             this.tbInputIdentNumber.Location = new System.Drawing.Point(459, 516);
             this.tbInputIdentNumber.Name = "tbInputIdentNumber";
-            this.tbInputIdentNumber.Size = new System.Drawing.Size(100, 21);
+            this.tbInputIdentNumber.Size = new System.Drawing.Size(100, 25);
             this.tbInputIdentNumber.TabIndex = 61;
             this.tbInputIdentNumber.Visible = false;
             // 
@@ -115,7 +110,7 @@
             // 
             this.tbInputCompetencyCode.Location = new System.Drawing.Point(353, 516);
             this.tbInputCompetencyCode.Name = "tbInputCompetencyCode";
-            this.tbInputCompetencyCode.Size = new System.Drawing.Size(100, 21);
+            this.tbInputCompetencyCode.Size = new System.Drawing.Size(100, 25);
             this.tbInputCompetencyCode.TabIndex = 60;
             this.tbInputCompetencyCode.Visible = false;
             // 
@@ -123,7 +118,7 @@
             // 
             this.tbInputCompanyCode.Location = new System.Drawing.Point(243, 516);
             this.tbInputCompanyCode.Name = "tbInputCompanyCode";
-            this.tbInputCompanyCode.Size = new System.Drawing.Size(100, 21);
+            this.tbInputCompanyCode.Size = new System.Drawing.Size(100, 25);
             this.tbInputCompanyCode.TabIndex = 59;
             this.tbInputCompanyCode.Visible = false;
             // 
@@ -131,7 +126,7 @@
             // 
             this.tbInputPropertyPurposeCode.Location = new System.Drawing.Point(137, 516);
             this.tbInputPropertyPurposeCode.Name = "tbInputPropertyPurposeCode";
-            this.tbInputPropertyPurposeCode.Size = new System.Drawing.Size(100, 21);
+            this.tbInputPropertyPurposeCode.Size = new System.Drawing.Size(100, 25);
             this.tbInputPropertyPurposeCode.TabIndex = 58;
             this.tbInputPropertyPurposeCode.Visible = false;
             // 
@@ -139,7 +134,7 @@
             // 
             this.tbInputPropertyTypeCode.Location = new System.Drawing.Point(27, 516);
             this.tbInputPropertyTypeCode.Name = "tbInputPropertyTypeCode";
-            this.tbInputPropertyTypeCode.Size = new System.Drawing.Size(100, 21);
+            this.tbInputPropertyTypeCode.Size = new System.Drawing.Size(100, 25);
             this.tbInputPropertyTypeCode.TabIndex = 57;
             this.tbInputPropertyTypeCode.Visible = false;
             // 
@@ -151,7 +146,7 @@
             this.tbInputCompetencyName.Location = new System.Drawing.Point(366, 432);
             this.tbInputCompetencyName.Name = "tbInputCompetencyName";
             this.tbInputCompetencyName.ReadOnly = true;
-            this.tbInputCompetencyName.Size = new System.Drawing.Size(124, 15);
+            this.tbInputCompetencyName.Size = new System.Drawing.Size(124, 19);
             this.tbInputCompetencyName.TabIndex = 56;
             this.tbInputCompetencyName.TabStop = false;
             // 
@@ -163,7 +158,7 @@
             this.tbInputCompanyName.Location = new System.Drawing.Point(119, 432);
             this.tbInputCompanyName.Name = "tbInputCompanyName";
             this.tbInputCompanyName.ReadOnly = true;
-            this.tbInputCompanyName.Size = new System.Drawing.Size(124, 15);
+            this.tbInputCompanyName.Size = new System.Drawing.Size(124, 19);
             this.tbInputCompanyName.TabIndex = 55;
             this.tbInputCompanyName.TabStop = false;
             // 
@@ -175,7 +170,7 @@
             this.tbInputPropertyPurposeName.Location = new System.Drawing.Point(366, 401);
             this.tbInputPropertyPurposeName.Name = "tbInputPropertyPurposeName";
             this.tbInputPropertyPurposeName.ReadOnly = true;
-            this.tbInputPropertyPurposeName.Size = new System.Drawing.Size(124, 15);
+            this.tbInputPropertyPurposeName.Size = new System.Drawing.Size(124, 19);
             this.tbInputPropertyPurposeName.TabIndex = 54;
             this.tbInputPropertyPurposeName.TabStop = false;
             // 
@@ -187,7 +182,7 @@
             this.tbInputPropertyTypeName.Location = new System.Drawing.Point(119, 401);
             this.tbInputPropertyTypeName.Name = "tbInputPropertyTypeName";
             this.tbInputPropertyTypeName.ReadOnly = true;
-            this.tbInputPropertyTypeName.Size = new System.Drawing.Size(124, 15);
+            this.tbInputPropertyTypeName.Size = new System.Drawing.Size(124, 19);
             this.tbInputPropertyTypeName.TabIndex = 53;
             this.tbInputPropertyTypeName.TabStop = false;
             // 
@@ -199,7 +194,7 @@
             this.tbInputProductCode.Location = new System.Drawing.Point(366, 368);
             this.tbInputProductCode.Name = "tbInputProductCode";
             this.tbInputProductCode.ReadOnly = true;
-            this.tbInputProductCode.Size = new System.Drawing.Size(124, 15);
+            this.tbInputProductCode.Size = new System.Drawing.Size(124, 19);
             this.tbInputProductCode.TabIndex = 52;
             this.tbInputProductCode.TabStop = false;
             // 
@@ -221,7 +216,7 @@
             this.tbInputProductName.Location = new System.Drawing.Point(119, 368);
             this.tbInputProductName.Name = "tbInputProductName";
             this.tbInputProductName.ReadOnly = true;
-            this.tbInputProductName.Size = new System.Drawing.Size(124, 15);
+            this.tbInputProductName.Size = new System.Drawing.Size(124, 19);
             this.tbInputProductName.TabIndex = 50;
             this.tbInputProductName.TabStop = false;
             // 
@@ -278,6 +273,8 @@
             this.aa,
             this.dataGridViewTextBoxColumn6,
             this.dataGridViewTextBoxColumn5,
+            this.박스명,
+            this.박스번호,
             this.dataGridViewTextBoxColumn7,
             this.Column5});
             this.dgListUser.EnableHeadersVisualStyles = false;
@@ -297,6 +294,111 @@
             this.dgListUser.TabStop = false;
             this.dgListUser.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgListUser_CellContentDoubleClick);
             this.dgListUser.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgListUser_CellMouseClick);
+            // 
+            // dgListInfo
+            // 
+            this.dgListInfo.AllowUserToAddRows = false;
+            this.dgListInfo.AllowUserToDeleteRows = false;
+            this.dgListInfo.AllowUserToResizeColumns = false;
+            this.dgListInfo.AllowUserToResizeRows = false;
+            this.dgListInfo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgListInfo.BackgroundColor = System.Drawing.Color.White;
+            this.dgListInfo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgListInfo.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dgListInfo.ColumnHeadersHeight = 26;
+            this.dgListInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgListInfo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.PROPERTY_TYPE_NAME,
+            this.PROPERTY_TYPE_CODE,
+            this.PROPERTY_PURPOSE_NAME,
+            this.PROPERTY_PURPOSE_CODE,
+            this.COMPANY_NAME,
+            this.COMPANY_CODE,
+            this.COMPETENCY_NAME,
+            this.COMPETENCY_CODE,
+            this.제품고유번호,
+            this.IDENT_NUMBER,
+            this.PRODUCT_NAME,
+            this.Column6,
+            this.Column7});
+            this.dgListInfo.EnableHeadersVisualStyles = false;
+            this.dgListInfo.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.dgListInfo.Location = new System.Drawing.Point(536, 349);
+            this.dgListInfo.MultiSelect = false;
+            this.dgListInfo.Name = "dgListInfo";
+            this.dgListInfo.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dgListInfo.RowHeadersVisible = false;
+            this.dgListInfo.RowTemplate.Height = 23;
+            this.dgListInfo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgListInfo.ShowCellToolTips = false;
+            this.dgListInfo.ShowEditingIcon = false;
+            this.dgListInfo.ShowRowErrors = false;
+            this.dgListInfo.Size = new System.Drawing.Size(482, 218);
+            this.dgListInfo.TabIndex = 46;
+            this.dgListInfo.TabStop = false;
+            // 
+            // SearchBtn
+            // 
+            this.SearchBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("SearchBtn.BackgroundImage")));
+            this.SearchBtn.FlatAppearance.BorderSize = 0;
+            this.SearchBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SearchBtn.Location = new System.Drawing.Point(967, 13);
+            this.SearchBtn.Margin = new System.Windows.Forms.Padding(0);
+            this.SearchBtn.Name = "SearchBtn";
+            this.SearchBtn.Size = new System.Drawing.Size(53, 25);
+            this.SearchBtn.TabIndex = 45;
+            this.SearchBtn.UseVisualStyleBackColor = true;
+            this.SearchBtn.Click += new System.EventHandler(this.SearchBtn_Click);
+            this.SearchBtn.MouseLeave += new System.EventHandler(this.SearchBtn_MouseLeave);
+            this.SearchBtn.MouseHover += new System.EventHandler(this.SearchBtn_MouseHover);
+            // 
+            // tbProductCode
+            // 
+            this.tbProductCode.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbProductCode.Location = new System.Drawing.Point(819, 18);
+            this.tbProductCode.Name = "tbProductCode";
+            this.tbProductCode.Size = new System.Drawing.Size(124, 18);
+            this.tbProductCode.TabIndex = 44;
+            this.tbProductCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbProductCode_KeyDown);
+            // 
+            // tbProductName
+            // 
+            this.tbProductName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbProductName.Location = new System.Drawing.Point(594, 18);
+            this.tbProductName.Name = "tbProductName";
+            this.tbProductName.Size = new System.Drawing.Size(124, 18);
+            this.tbProductName.TabIndex = 43;
+            this.tbProductName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbProductName_KeyDown);
+            // 
+            // tbReturnDate
+            // 
+            this.tbReturnDate.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbReturnDate.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.tbReturnDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.tbReturnDate.Location = new System.Drawing.Point(119, 462);
+            this.tbReturnDate.Name = "tbReturnDate";
+            this.tbReturnDate.ReadOnly = true;
+            this.tbReturnDate.Size = new System.Drawing.Size(124, 19);
+            this.tbReturnDate.TabIndex = 64;
+            this.tbReturnDate.TabStop = false;
+            // 
+            // barcodeSerialPort
+            // 
+            this.barcodeSerialPort.BaudRate = 115200;
+            this.barcodeSerialPort.PortName = "COM6";
+            this.barcodeSerialPort.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.barcodeSerialPort_DataReceived);
+            // 
+            // stIco
+            // 
+            this.stIco.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("stIco.BackgroundImage")));
+            this.stIco.FlatAppearance.BorderSize = 0;
+            this.stIco.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.stIco.Location = new System.Drawing.Point(21, 580);
+            this.stIco.Margin = new System.Windows.Forms.Padding(0);
+            this.stIco.Name = "stIco";
+            this.stIco.Size = new System.Drawing.Size(27, 23);
+            this.stIco.TabIndex = 65;
+            this.stIco.UseVisualStyleBackColor = true;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -389,6 +491,17 @@
             this.dataGridViewTextBoxColumn5.ReadOnly = true;
             this.dataGridViewTextBoxColumn5.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
+            // 박스명
+            // 
+            this.박스명.HeaderText = "박스명";
+            this.박스명.Name = "박스명";
+            // 
+            // 박스번호
+            // 
+            this.박스번호.HeaderText = "박스번호";
+            this.박스번호.Name = "박스번호";
+            this.박스번호.Visible = false;
+            // 
             // dataGridViewTextBoxColumn7
             // 
             this.dataGridViewTextBoxColumn7.DataPropertyName = "대여시간";
@@ -405,46 +518,6 @@
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
             this.Column5.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // dgListInfo
-            // 
-            this.dgListInfo.AllowUserToAddRows = false;
-            this.dgListInfo.AllowUserToDeleteRows = false;
-            this.dgListInfo.AllowUserToResizeColumns = false;
-            this.dgListInfo.AllowUserToResizeRows = false;
-            this.dgListInfo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgListInfo.BackgroundColor = System.Drawing.Color.White;
-            this.dgListInfo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgListInfo.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.dgListInfo.ColumnHeadersHeight = 26;
-            this.dgListInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dgListInfo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.PROPERTY_TYPE_NAME,
-            this.PROPERTY_TYPE_CODE,
-            this.PROPERTY_PURPOSE_NAME,
-            this.PROPERTY_PURPOSE_CODE,
-            this.COMPANY_NAME,
-            this.COMPANY_CODE,
-            this.COMPETENCY_NAME,
-            this.COMPETENCY_CODE,
-            this.제품고유번호,
-            this.IDENT_NUMBER,
-            this.PRODUCT_NAME});
-            this.dgListInfo.EnableHeadersVisualStyles = false;
-            this.dgListInfo.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.dgListInfo.Location = new System.Drawing.Point(536, 349);
-            this.dgListInfo.MultiSelect = false;
-            this.dgListInfo.Name = "dgListInfo";
-            this.dgListInfo.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.dgListInfo.RowHeadersVisible = false;
-            this.dgListInfo.RowTemplate.Height = 23;
-            this.dgListInfo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgListInfo.ShowCellToolTips = false;
-            this.dgListInfo.ShowEditingIcon = false;
-            this.dgListInfo.ShowRowErrors = false;
-            this.dgListInfo.Size = new System.Drawing.Size(482, 218);
-            this.dgListInfo.TabIndex = 46;
-            this.dgListInfo.TabStop = false;
             // 
             // PROPERTY_TYPE_NAME
             // 
@@ -549,68 +622,15 @@
             this.PRODUCT_NAME.ReadOnly = true;
             this.PRODUCT_NAME.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
-            // SearchBtn
+            // Column6
             // 
-            this.SearchBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("SearchBtn.BackgroundImage")));
-            this.SearchBtn.FlatAppearance.BorderSize = 0;
-            this.SearchBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SearchBtn.Location = new System.Drawing.Point(967, 13);
-            this.SearchBtn.Margin = new System.Windows.Forms.Padding(0);
-            this.SearchBtn.Name = "SearchBtn";
-            this.SearchBtn.Size = new System.Drawing.Size(53, 25);
-            this.SearchBtn.TabIndex = 45;
-            this.SearchBtn.UseVisualStyleBackColor = true;
-            this.SearchBtn.Click += new System.EventHandler(this.SearchBtn_Click);
-            this.SearchBtn.MouseLeave += new System.EventHandler(this.SearchBtn_MouseLeave);
-            this.SearchBtn.MouseHover += new System.EventHandler(this.SearchBtn_MouseHover);
+            this.Column6.HeaderText = "박스명";
+            this.Column6.Name = "Column6";
             // 
-            // tbProductCode
+            // Column7
             // 
-            this.tbProductCode.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbProductCode.Location = new System.Drawing.Point(819, 18);
-            this.tbProductCode.Name = "tbProductCode";
-            this.tbProductCode.Size = new System.Drawing.Size(124, 14);
-            this.tbProductCode.TabIndex = 44;
-            this.tbProductCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbProductCode_KeyDown);
-            // 
-            // tbProductName
-            // 
-            this.tbProductName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbProductName.Location = new System.Drawing.Point(594, 18);
-            this.tbProductName.Name = "tbProductName";
-            this.tbProductName.Size = new System.Drawing.Size(124, 14);
-            this.tbProductName.TabIndex = 43;
-            this.tbProductName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbProductName_KeyDown);
-            // 
-            // tbReturnDate
-            // 
-            this.tbReturnDate.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbReturnDate.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.tbReturnDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.tbReturnDate.Location = new System.Drawing.Point(119, 462);
-            this.tbReturnDate.Name = "tbReturnDate";
-            this.tbReturnDate.ReadOnly = true;
-            this.tbReturnDate.Size = new System.Drawing.Size(124, 15);
-            this.tbReturnDate.TabIndex = 64;
-            this.tbReturnDate.TabStop = false;
-            // 
-            // barcodeSerialPort
-            // 
-            this.barcodeSerialPort.BaudRate = 115200;
-            this.barcodeSerialPort.PortName = "COM6";
-            this.barcodeSerialPort.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.barcodeSerialPort_DataReceived);
-            // 
-            // stIco
-            // 
-            this.stIco.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("stIco.BackgroundImage")));
-            this.stIco.FlatAppearance.BorderSize = 0;
-            this.stIco.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.stIco.Location = new System.Drawing.Point(21, 580);
-            this.stIco.Margin = new System.Windows.Forms.Padding(0);
-            this.stIco.Name = "stIco";
-            this.stIco.Size = new System.Drawing.Size(27, 23);
-            this.stIco.TabIndex = 65;
-            this.stIco.UseVisualStyleBackColor = true;
+            this.Column7.HeaderText = "박스번호";
+            this.Column7.Name = "Column7";
             // 
             // FormReturn
             // 
@@ -620,7 +640,6 @@
             this.Controls.Add(this.stIco);
             this.Controls.Add(this.tbReturnDate);
             this.Controls.Add(this.tbMessage);
-            this.Controls.Add(this.tbUserId);
             this.Controls.Add(this.tbInputIdentNumber);
             this.Controls.Add(this.tbInputCompetencyCode);
             this.Controls.Add(this.tbInputCompanyCode);
@@ -656,7 +675,6 @@
         #endregion
 
         private System.Windows.Forms.TextBox tbMessage;
-        public System.Windows.Forms.TextBox tbUserId;
         public System.Windows.Forms.TextBox tbInputIdentNumber;
         public System.Windows.Forms.TextBox tbInputCompetencyCode;
         public System.Windows.Forms.TextBox tbInputCompanyCode;
@@ -676,6 +694,9 @@
         private System.Windows.Forms.Button SearchBtn;
         private System.Windows.Forms.TextBox tbProductCode;
         private System.Windows.Forms.TextBox tbProductName;
+        private System.Windows.Forms.TextBox tbReturnDate;
+        private System.IO.Ports.SerialPort barcodeSerialPort;
+        private System.Windows.Forms.Button stIco;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
@@ -687,6 +708,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn aa;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 박스명;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 박스번호;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn PROPERTY_TYPE_NAME;
@@ -700,8 +723,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn 제품고유번호;
         private System.Windows.Forms.DataGridViewTextBoxColumn IDENT_NUMBER;
         private System.Windows.Forms.DataGridViewTextBoxColumn PRODUCT_NAME;
-        private System.Windows.Forms.TextBox tbReturnDate;
-        private System.IO.Ports.SerialPort barcodeSerialPort;
-        private System.Windows.Forms.Button stIco;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
     }
 }

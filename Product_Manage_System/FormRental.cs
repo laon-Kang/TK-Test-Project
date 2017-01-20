@@ -8,8 +8,9 @@ using System.Text;
 using System.Threading;
 using System.Windows.Forms;
 using System.IO.Ports;
-using Microsoft.Speech;
-using Microsoft.Speech.Synthesis;
+using DEFINES;
+//using Microsoft.Speech;
+//using Microsoft.Speech.Synthesis;
 
 namespace Product_Manage_System
 {
@@ -18,7 +19,7 @@ namespace Product_Manage_System
         private TurckBarcodeData _barcodedata;
         public delegate void barcodeDel(string scanData);
 
-        SpeechSynthesizer ts = new SpeechSynthesizer();
+        //SpeechSynthesizer ts = new SpeechSynthesizer();
 
         public FormRental()
         {
@@ -44,7 +45,7 @@ namespace Product_Manage_System
             }
             catch (Exception ex)
             {
-                FormMSG msgEx2 = new FormMSG(ex.Message, true);
+                FormMSG msgEx2 = new FormMSG(ex.Message, MsgBoxLevel.MSG_OK);
                 msgEx2.ShowDialog();
             }
         }
@@ -58,7 +59,7 @@ namespace Product_Manage_System
             }
             catch (Exception ex)
             {
-                FormMSG msgEx2 = new FormMSG(ex.Message, true);
+                FormMSG msgEx2 = new FormMSG(ex.Message, MsgBoxLevel.MSG_OK);
                 msgEx2.ShowDialog();
             }
         }
@@ -93,7 +94,8 @@ namespace Product_Manage_System
                         rowItem.Cells[8].Value = row[COLUMNS.TB_PRODUCT_INFO.IDENT_NUMBER].ToString();
                         rowItem.Cells[9].Value = row[COLUMNS.TB_PRODUCT_INFO.PRODUCT_CODE].ToString();
                         rowItem.Cells[10].Value = row[COLUMNS.TB_PRODUCT_INFO.PRODUCT_NAME].ToString();
-                    
+                        rowItem.Cells[11].Value = row[COLUMNS.TB_PRODUCT_INFO.BOX_NAME].ToString();
+                        rowItem.Cells[12].Value = row[COLUMNS.TB_PRODUCT_INFO.BOX_NUMBER].ToString();
                         rowItem.Tag = row;
 
                         dgListInfo.Rows.Add(rowItem);
@@ -101,7 +103,7 @@ namespace Product_Manage_System
                 }
 
                 // Product History 조회
-                if (DBMan.SelectProductRentalList(tbProductName.Text, tbProductCode.Text, tbUserId.Text, "RT", "", false, false, out dtList))
+                if (DBMan.SelectProductRentalList(tbProductName.Text, tbProductCode.Text, Common.strUSER_ID, "RT", "", false, false, out dtList))
                 {
                     dgListUser.Rows.Clear();
 
@@ -132,7 +134,7 @@ namespace Product_Manage_System
             }
             catch (Exception ex)
             {
-                FormMSG msgEx2 = new FormMSG(ex.Message, true);
+                FormMSG msgEx2 = new FormMSG(ex.Message, MsgBoxLevel.MSG_OK);
                 msgEx2.ShowDialog();
             }
         }
@@ -201,23 +203,23 @@ namespace Product_Manage_System
             rowProduct[COLUMNS.TB_PRODUCT_HISTORY.PROPERTY_PURPOSE_CODE] = tbInputPropertyPurposeCode.Text;
             rowProduct[COLUMNS.TB_PRODUCT_HISTORY.COMPANY_CODE] = tbInputCompanyCode.Text;
             rowProduct[COLUMNS.TB_PRODUCT_HISTORY.COMPETENCY_CODE] = tbInputCompetencyCode.Text;
-            rowProduct[COLUMNS.TB_PRODUCT_HISTORY.USER_ID] = tbUserId.Text;
+            rowProduct[COLUMNS.TB_PRODUCT_HISTORY.USER_ID] = Common.strUSER_ID;
             rowProduct[COLUMNS.TB_PRODUCT_HISTORY.NOTE] = tbInputNote.Text;
             rowProduct[COLUMNS.TB_PRODUCT_HISTORY.PRODUCT_STATUS_CODE] = "RT";
             rowProduct[COLUMNS.TB_PRODUCT_HISTORY.USE_YN] = "1";
 
             if (DBMan.InsertProductHistory(rowProduct))
             {
-                ts.SetOutputToDefaultAudioDevice();
-                ts.Speak(tbInputProductName.Text + "제품 대여가 정상처리 되었습니다.");
+                //ts.SetOutputToDefaultAudioDevice();
+                //ts.Speak(tbInputProductName.Text + "제품 대여가 정상처리 되었습니다.");
 
                 CancelBtn.PerformClick();
                 setDataGridView();
             }
             else
             {
-                ts.SetOutputToDefaultAudioDevice();
-                ts.Speak(tbInputProductName.Text + "제품 대여가 실패했습니다.");
+                //ts.SetOutputToDefaultAudioDevice();
+                //ts.Speak(tbInputProductName.Text + "제품 대여가 실패했습니다.");
 
                 FormMSG msgF = new FormMSG("제품 대여 실패", "OK", true);
 
@@ -279,16 +281,16 @@ namespace Product_Manage_System
         {
             try
             {
-                string strTemp = "F-D-T-PS-000002-2578112";
-
-                _barcodedata.SetData(strTemp);
-
-                if (_barcodedata.Decodable())
+                //string strTemp = "F-D-T-PS-000002-2578112";
+                int dataType;
+                _barcodedata.SetData(data);
+                dataType = _barcodedata.GetBarcodeDataType();
+                if (_barcodedata.Decodable(dataType))
                 {
-                    _barcodedata.Decode();
+                    _barcodedata.Decode(dataType);
                 }
 
-                if (tbInputProductCode.Text == _barcodedata.GetProductCode())
+                if (tbInputProductCode.Text == _barcodedata.GetProductCode() && ( tbInputIdentNumber.Text == _barcodedata.GetIdentNumber()))
                 {
                     RentalProduct();
                     Clear_Product_InputData();
@@ -307,8 +309,8 @@ namespace Product_Manage_System
                         this.tbMessage.ForeColor = Color.Yellow;
                         this.tbMessage.Text = "제품이 선택되지 않았습니다.";
 
-                        ts.SetOutputToDefaultAudioDevice();
-                        ts.Speak("제품이 선택되지 않았습니다.");
+                        //ts.SetOutputToDefaultAudioDevice();
+                        //ts.Speak("제품이 선택되지 않았습니다.");
 
                         this.stIco.BackgroundImage = Image.FromFile(@"Image\\stIcoyellow.jpg");
                         return;
@@ -399,7 +401,7 @@ namespace Product_Manage_System
             }
             catch (Exception ex)
             {
-                FormMSG msgEx2 = new FormMSG(ex.Message, true);
+                FormMSG msgEx2 = new FormMSG(ex.Message, MsgBoxLevel.MSG_OK);
                 msgEx2.ShowDialog();
             }
         }

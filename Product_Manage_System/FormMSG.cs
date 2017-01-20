@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using DEFINES;
 namespace Product_Manage_System
 {
     public partial class FormMSG : Form
     {
+        string msg = string.Empty;
+        public int state = -1; 
         public FormMSG()
         {
             InitializeComponent();
@@ -20,6 +22,7 @@ namespace Product_Manage_System
         private void okBtn_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.OK;
+            state = DialogResult.OK.GetHashCode(); 
             this.Close();
         }
 
@@ -28,15 +31,32 @@ namespace Product_Manage_System
             this.Close();
         }
 
-        string msg = string.Empty;
 
-        public FormMSG(String msg, bool bAlram)
+        public FormMSG(String msg, int state)
         {
             InitializeComponent();
 
             this.msg = msg;
 
             closeBtn.Visible = false;
+            int msgState = state;
+            switch (msgState)
+            {
+                case MsgBoxLevel.MSG_OK:
+                    OkBtn.Visible = true;
+                    yesBtn.Visible = false;
+                    noBtn.Visible = false;
+                    break;
+                case MsgBoxLevel.MSG_YES_NO:
+                    OkBtn.Visible = false;
+                    yesBtn.Visible = true;
+                    noBtn.Visible = true;
+                    break;
+                case MsgBoxLevel.MSG_OK_CANCLE:
+                    break;
+                case MsgBoxLevel.MSG_RETRY_STOP_CANCLE:
+                    break;
+            }
         }
 
         public FormMSG(String msg, string Type, bool bAlram)
@@ -126,6 +146,20 @@ namespace Product_Manage_System
         private void okBtn_MouseLeave(object sender, EventArgs e)
         {
             ButtonImageChange("OkBtn", "Leave");
+        }
+
+        private void yesBtn_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.Yes;
+            state = DialogResult.Yes.GetHashCode();
+            this.Close();
+        }
+
+        private void noBtn_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.No;
+            state = DialogResult.No.GetHashCode();
+            this.Close();
         }
     }
 }

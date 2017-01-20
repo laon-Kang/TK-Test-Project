@@ -9,13 +9,17 @@ using System.Runtime.InteropServices;
 using System.Text.RegularExpressions;
 using System.Net.Sockets;
 using System.Xml;
+using System.Drawing;
+using System.Windows.Forms;
 
 namespace Product_Manage_System
 {
     class Common
     {
-        public static String strUserName = String.Empty;
-        public static String strUserID = String.Empty;
+        public static String strUSER_NAME = String.Empty;
+        public static String strUSER_ID = String.Empty;
+        public static String strAUTHORITY_CODE = String.Empty;
+        public static String strMENU_NAME = String.Empty;
 
         public static System.IO.Ports.Parity getParity(string Parity)
         {
@@ -85,6 +89,38 @@ namespace Product_Manage_System
             {
                 return null;
             }
+        }
+
+        public static void SetButtonImage(Button _button, string _buttonName, string _eventType)
+        {
+            try
+            {
+                Image img = Image.FromFile(@"Image\\" + _buttonName + _eventType + ".jpg");
+
+                if (_button.Name == "LoginBtn")
+                {
+                    _button.BackgroundImage = img;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+    }
+
+    /// <summary>
+    /// 이상현
+    /// </summary>
+    public class ComboBoxItem  // 단위 아이템
+    {
+        public string Name { get; set; }
+        public string Value { get; set; }
+        public object Tag { get; set; }
+
+        public override string ToString()
+        {
+            return Name; // combobox에 디스플레이 됨. 
         }
     }
 }

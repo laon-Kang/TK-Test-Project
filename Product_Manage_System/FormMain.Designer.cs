@@ -112,6 +112,7 @@
             this.LMDisposal.Size = new System.Drawing.Size(37, 18);
             this.LMDisposal.TabIndex = 34;
             this.LMDisposal.UseVisualStyleBackColor = true;
+            this.LMDisposal.Visible = false;
             this.LMDisposal.Click += new System.EventHandler(this.LMDisposal_Click);
             this.LMDisposal.MouseLeave += new System.EventHandler(this.LMDisposal_MouseLeave);
             this.LMDisposal.MouseHover += new System.EventHandler(this.LMDisposal_MouseHover);
@@ -127,6 +128,7 @@
             this.LMNewRegistration.Size = new System.Drawing.Size(69, 18);
             this.LMNewRegistration.TabIndex = 32;
             this.LMNewRegistration.UseVisualStyleBackColor = true;
+            this.LMNewRegistration.Visible = false;
             this.LMNewRegistration.Click += new System.EventHandler(this.LMNewRegistration_Click);
             this.LMNewRegistration.MouseLeave += new System.EventHandler(this.LMNewRegistration_MouseLeave);
             this.LMNewRegistration.MouseHover += new System.EventHandler(this.LMNewRegistration_MouseHover);

@@ -45,39 +45,17 @@
             this.OverallHistoryBtn = new System.Windows.Forms.Button();
             this.CurrentHistoryBtn = new System.Windows.Forms.Button();
             this.dgRentalList = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.aa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SearchBtn = new System.Windows.Forms.Button();
             this.tbProductCode = new System.Windows.Forms.TextBox();
             this.tbProductName = new System.Windows.Forms.TextBox();
             this.tbInputRentalDate = new System.Windows.Forms.TextBox();
             this.tbInputNote = new System.Windows.Forms.TextBox();
             this.dgSampleRentalList = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgOverallHistoryList = new System.Windows.Forms.DataGridView();
+            this.tbInputReturnDate = new System.Windows.Forms.TextBox();
+            this.tbStatusName = new System.Windows.Forms.TextBox();
+            this.tbInputToTNote = new System.Windows.Forms.TextBox();
+            this.tabChk = new System.Windows.Forms.TextBox();
             this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -93,11 +71,39 @@
             this.상태 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn32 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.반납시간 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn33 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tbInputReturnDate = new System.Windows.Forms.TextBox();
-            this.tbStatusName = new System.Windows.Forms.TextBox();
-            this.tbInputToTNote = new System.Windows.Forms.TextBox();
-            this.tabChk = new System.Windows.Forms.TextBox();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.aa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgRentalList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgSampleRentalList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgOverallHistoryList)).BeginInit();
@@ -119,7 +125,7 @@
             // 
             this.tbUserId.Location = new System.Drawing.Point(27, 11);
             this.tbUserId.Name = "tbUserId";
-            this.tbUserId.Size = new System.Drawing.Size(100, 21);
+            this.tbUserId.Size = new System.Drawing.Size(100, 22);
             this.tbUserId.TabIndex = 62;
             this.tbUserId.Visible = false;
             // 
@@ -127,7 +133,7 @@
             // 
             this.tbInputIdentNumber.Location = new System.Drawing.Point(920, 181);
             this.tbInputIdentNumber.Name = "tbInputIdentNumber";
-            this.tbInputIdentNumber.Size = new System.Drawing.Size(100, 21);
+            this.tbInputIdentNumber.Size = new System.Drawing.Size(100, 22);
             this.tbInputIdentNumber.TabIndex = 61;
             this.tbInputIdentNumber.Visible = false;
             // 
@@ -135,7 +141,7 @@
             // 
             this.tbInputCompetencyCode.Location = new System.Drawing.Point(814, 181);
             this.tbInputCompetencyCode.Name = "tbInputCompetencyCode";
-            this.tbInputCompetencyCode.Size = new System.Drawing.Size(100, 21);
+            this.tbInputCompetencyCode.Size = new System.Drawing.Size(100, 22);
             this.tbInputCompetencyCode.TabIndex = 60;
             this.tbInputCompetencyCode.Visible = false;
             // 
@@ -143,7 +149,7 @@
             // 
             this.tbInputCompanyCode.Location = new System.Drawing.Point(704, 181);
             this.tbInputCompanyCode.Name = "tbInputCompanyCode";
-            this.tbInputCompanyCode.Size = new System.Drawing.Size(100, 21);
+            this.tbInputCompanyCode.Size = new System.Drawing.Size(100, 22);
             this.tbInputCompanyCode.TabIndex = 59;
             this.tbInputCompanyCode.Visible = false;
             // 
@@ -151,7 +157,7 @@
             // 
             this.tbInputPropertyPurposeCode.Location = new System.Drawing.Point(598, 181);
             this.tbInputPropertyPurposeCode.Name = "tbInputPropertyPurposeCode";
-            this.tbInputPropertyPurposeCode.Size = new System.Drawing.Size(100, 21);
+            this.tbInputPropertyPurposeCode.Size = new System.Drawing.Size(100, 22);
             this.tbInputPropertyPurposeCode.TabIndex = 58;
             this.tbInputPropertyPurposeCode.Visible = false;
             // 
@@ -159,7 +165,7 @@
             // 
             this.tbInputPropertyTypeCode.Location = new System.Drawing.Point(488, 181);
             this.tbInputPropertyTypeCode.Name = "tbInputPropertyTypeCode";
-            this.tbInputPropertyTypeCode.Size = new System.Drawing.Size(100, 21);
+            this.tbInputPropertyTypeCode.Size = new System.Drawing.Size(100, 22);
             this.tbInputPropertyTypeCode.TabIndex = 57;
             this.tbInputPropertyTypeCode.Visible = false;
             // 
@@ -289,6 +295,8 @@
             this.dataGridViewTextBoxColumn6,
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn7,
+            this.Column9,
+            this.Column10,
             this.Column5});
             this.dgRentalList.EnableHeadersVisualStyles = false;
             this.dgRentalList.ImeMode = System.Windows.Forms.ImeMode.NoControl;
@@ -307,116 +315,6 @@
             this.dgRentalList.TabIndex = 47;
             this.dgRentalList.TabStop = false;
             this.dgRentalList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgRentalList_CellClick);
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "자산유형";
-            this.dataGridViewTextBoxColumn1.HeaderText = "자산유형";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumn1.Visible = false;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "자산유형코드";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column1.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "자산목적";
-            this.dataGridViewTextBoxColumn2.FillWeight = 125F;
-            this.dataGridViewTextBoxColumn2.HeaderText = "자산목적";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumn2.Visible = false;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "자산목적코드";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column2.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "회사구분";
-            this.dataGridViewTextBoxColumn3.HeaderText = "회사구분";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumn3.Visible = false;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "회사구분코드";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column3.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "제품군구분";
-            this.dataGridViewTextBoxColumn4.FillWeight = 150F;
-            this.dataGridViewTextBoxColumn4.HeaderText = "제품군구분";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            this.dataGridViewTextBoxColumn4.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumn4.Visible = false;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "제품군구분코드";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column4.Visible = false;
-            // 
-            // aa
-            // 
-            this.aa.HeaderText = "고유번호";
-            this.aa.Name = "aa";
-            this.aa.ReadOnly = true;
-            this.aa.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "제품코드";
-            this.dataGridViewTextBoxColumn6.HeaderText = "제품코드";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            this.dataGridViewTextBoxColumn6.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "제품명";
-            this.dataGridViewTextBoxColumn5.FillWeight = 150F;
-            this.dataGridViewTextBoxColumn5.HeaderText = "제품명";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            this.dataGridViewTextBoxColumn5.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "대여시간";
-            this.dataGridViewTextBoxColumn7.FillWeight = 110F;
-            this.dataGridViewTextBoxColumn7.HeaderText = "대여일";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
-            this.dataGridViewTextBoxColumn7.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "NOTE";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            this.Column5.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // SearchBtn
             // 
@@ -438,7 +336,7 @@
             this.tbProductCode.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbProductCode.Location = new System.Drawing.Point(819, 18);
             this.tbProductCode.Name = "tbProductCode";
-            this.tbProductCode.Size = new System.Drawing.Size(124, 14);
+            this.tbProductCode.Size = new System.Drawing.Size(124, 15);
             this.tbProductCode.TabIndex = 44;
             this.tbProductCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbProductName_KeyDown);
             // 
@@ -447,7 +345,7 @@
             this.tbProductName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbProductName.Location = new System.Drawing.Point(594, 18);
             this.tbProductName.Name = "tbProductName";
-            this.tbProductName.Size = new System.Drawing.Size(124, 14);
+            this.tbProductName.Size = new System.Drawing.Size(124, 15);
             this.tbProductName.TabIndex = 43;
             this.tbProductName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbProductName_KeyDown);
             // 
@@ -499,6 +397,8 @@
             this.dataGridViewTextBoxColumn17,
             this.dataGridViewTextBoxColumn18,
             this.dataGridViewTextBoxColumn19,
+            this.Column11,
+            this.Column12,
             this.dataGridViewTextBoxColumn20});
             this.dgSampleRentalList.EnableHeadersVisualStyles = false;
             this.dgSampleRentalList.ImeMode = System.Windows.Forms.ImeMode.NoControl;
@@ -517,116 +417,6 @@
             this.dgSampleRentalList.TabIndex = 66;
             this.dgSampleRentalList.TabStop = false;
             this.dgSampleRentalList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgSampleRentalList_CellClick);
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "자산유형";
-            this.dataGridViewTextBoxColumn8.HeaderText = "자산유형";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.ReadOnly = true;
-            this.dataGridViewTextBoxColumn8.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumn8.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.HeaderText = "자산유형코드";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.ReadOnly = true;
-            this.dataGridViewTextBoxColumn9.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumn9.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "자산목적";
-            this.dataGridViewTextBoxColumn10.FillWeight = 125F;
-            this.dataGridViewTextBoxColumn10.HeaderText = "자산목적";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.ReadOnly = true;
-            this.dataGridViewTextBoxColumn10.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumn10.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn11
-            // 
-            this.dataGridViewTextBoxColumn11.HeaderText = "자산목적코드";
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            this.dataGridViewTextBoxColumn11.ReadOnly = true;
-            this.dataGridViewTextBoxColumn11.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumn11.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn12
-            // 
-            this.dataGridViewTextBoxColumn12.DataPropertyName = "회사구분";
-            this.dataGridViewTextBoxColumn12.HeaderText = "회사구분";
-            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            this.dataGridViewTextBoxColumn12.ReadOnly = true;
-            this.dataGridViewTextBoxColumn12.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumn12.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn13
-            // 
-            this.dataGridViewTextBoxColumn13.HeaderText = "회사구분코드";
-            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            this.dataGridViewTextBoxColumn13.ReadOnly = true;
-            this.dataGridViewTextBoxColumn13.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumn13.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn14
-            // 
-            this.dataGridViewTextBoxColumn14.DataPropertyName = "제품군구분";
-            this.dataGridViewTextBoxColumn14.FillWeight = 150F;
-            this.dataGridViewTextBoxColumn14.HeaderText = "제품군구분";
-            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
-            this.dataGridViewTextBoxColumn14.ReadOnly = true;
-            this.dataGridViewTextBoxColumn14.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumn14.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn15
-            // 
-            this.dataGridViewTextBoxColumn15.HeaderText = "제품군구분코드";
-            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
-            this.dataGridViewTextBoxColumn15.ReadOnly = true;
-            this.dataGridViewTextBoxColumn15.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumn15.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn16
-            // 
-            this.dataGridViewTextBoxColumn16.HeaderText = "고유번호";
-            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
-            this.dataGridViewTextBoxColumn16.ReadOnly = true;
-            this.dataGridViewTextBoxColumn16.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // dataGridViewTextBoxColumn17
-            // 
-            this.dataGridViewTextBoxColumn17.DataPropertyName = "제품코드";
-            this.dataGridViewTextBoxColumn17.HeaderText = "제품코드";
-            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
-            this.dataGridViewTextBoxColumn17.ReadOnly = true;
-            this.dataGridViewTextBoxColumn17.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // dataGridViewTextBoxColumn18
-            // 
-            this.dataGridViewTextBoxColumn18.DataPropertyName = "제품명";
-            this.dataGridViewTextBoxColumn18.FillWeight = 150F;
-            this.dataGridViewTextBoxColumn18.HeaderText = "제품명";
-            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
-            this.dataGridViewTextBoxColumn18.ReadOnly = true;
-            this.dataGridViewTextBoxColumn18.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // dataGridViewTextBoxColumn19
-            // 
-            this.dataGridViewTextBoxColumn19.DataPropertyName = "샘플대여시간";
-            this.dataGridViewTextBoxColumn19.FillWeight = 110F;
-            this.dataGridViewTextBoxColumn19.HeaderText = "샘플대여일";
-            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
-            this.dataGridViewTextBoxColumn19.ReadOnly = true;
-            this.dataGridViewTextBoxColumn19.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // dataGridViewTextBoxColumn20
-            // 
-            this.dataGridViewTextBoxColumn20.HeaderText = "NOTE";
-            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
-            this.dataGridViewTextBoxColumn20.ReadOnly = true;
-            this.dataGridViewTextBoxColumn20.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // dgOverallHistoryList
             // 
@@ -655,6 +445,8 @@
             this.상태,
             this.dataGridViewTextBoxColumn32,
             this.반납시간,
+            this.Column8,
+            this.Column7,
             this.dataGridViewTextBoxColumn33});
             this.dgOverallHistoryList.EnableHeadersVisualStyles = false;
             this.dgOverallHistoryList.ImeMode = System.Windows.Forms.ImeMode.NoControl;
@@ -674,6 +466,53 @@
             this.dgOverallHistoryList.TabStop = false;
             this.dgOverallHistoryList.Visible = false;
             this.dgOverallHistoryList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgOverallHistoryList_CellClick);
+            // 
+            // tbInputReturnDate
+            // 
+            this.tbInputReturnDate.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbInputReturnDate.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.tbInputReturnDate.Font = new System.Drawing.Font("나눔고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.tbInputReturnDate.Location = new System.Drawing.Point(851, 128);
+            this.tbInputReturnDate.Name = "tbInputReturnDate";
+            this.tbInputReturnDate.ReadOnly = true;
+            this.tbInputReturnDate.Size = new System.Drawing.Size(124, 15);
+            this.tbInputReturnDate.TabIndex = 68;
+            this.tbInputReturnDate.TabStop = false;
+            this.tbInputReturnDate.Visible = false;
+            // 
+            // tbStatusName
+            // 
+            this.tbStatusName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbStatusName.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.tbStatusName.Font = new System.Drawing.Font("나눔고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.tbStatusName.Location = new System.Drawing.Point(119, 160);
+            this.tbStatusName.Name = "tbStatusName";
+            this.tbStatusName.ReadOnly = true;
+            this.tbStatusName.Size = new System.Drawing.Size(124, 15);
+            this.tbStatusName.TabIndex = 69;
+            this.tbStatusName.TabStop = false;
+            this.tbStatusName.Visible = false;
+            // 
+            // tbInputToTNote
+            // 
+            this.tbInputToTNote.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbInputToTNote.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.tbInputToTNote.Font = new System.Drawing.Font("나눔고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.tbInputToTNote.Location = new System.Drawing.Point(363, 160);
+            this.tbInputToTNote.Name = "tbInputToTNote";
+            this.tbInputToTNote.ReadOnly = true;
+            this.tbInputToTNote.Size = new System.Drawing.Size(612, 15);
+            this.tbInputToTNote.TabIndex = 70;
+            this.tbInputToTNote.TabStop = false;
+            this.tbInputToTNote.Visible = false;
+            // 
+            // tabChk
+            // 
+            this.tabChk.Location = new System.Drawing.Point(133, 11);
+            this.tabChk.Name = "tabChk";
+            this.tabChk.Size = new System.Drawing.Size(100, 22);
+            this.tabChk.TabIndex = 71;
+            this.tabChk.Visible = false;
             // 
             // dataGridViewTextBoxColumn21
             // 
@@ -797,6 +636,19 @@
             this.반납시간.Name = "반납시간";
             this.반납시간.ReadOnly = true;
             // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "박스번호";
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            this.Column8.Visible = false;
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "박스명";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            // 
             // dataGridViewTextBoxColumn33
             // 
             this.dataGridViewTextBoxColumn33.HeaderText = "NOTE";
@@ -804,52 +656,251 @@
             this.dataGridViewTextBoxColumn33.ReadOnly = true;
             this.dataGridViewTextBoxColumn33.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
-            // tbInputReturnDate
+            // dataGridViewTextBoxColumn1
             // 
-            this.tbInputReturnDate.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbInputReturnDate.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.tbInputReturnDate.Font = new System.Drawing.Font("나눔고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.tbInputReturnDate.Location = new System.Drawing.Point(851, 128);
-            this.tbInputReturnDate.Name = "tbInputReturnDate";
-            this.tbInputReturnDate.ReadOnly = true;
-            this.tbInputReturnDate.Size = new System.Drawing.Size(124, 15);
-            this.tbInputReturnDate.TabIndex = 68;
-            this.tbInputReturnDate.TabStop = false;
-            this.tbInputReturnDate.Visible = false;
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "자산유형";
+            this.dataGridViewTextBoxColumn1.HeaderText = "자산유형";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn1.Visible = false;
             // 
-            // tbStatusName
+            // Column1
             // 
-            this.tbStatusName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbStatusName.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.tbStatusName.Font = new System.Drawing.Font("나눔고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.tbStatusName.Location = new System.Drawing.Point(119, 160);
-            this.tbStatusName.Name = "tbStatusName";
-            this.tbStatusName.ReadOnly = true;
-            this.tbStatusName.Size = new System.Drawing.Size(124, 15);
-            this.tbStatusName.TabIndex = 69;
-            this.tbStatusName.TabStop = false;
-            this.tbStatusName.Visible = false;
+            this.Column1.HeaderText = "자산유형코드";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column1.Visible = false;
             // 
-            // tbInputToTNote
+            // dataGridViewTextBoxColumn2
             // 
-            this.tbInputToTNote.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbInputToTNote.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.tbInputToTNote.Font = new System.Drawing.Font("나눔고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.tbInputToTNote.Location = new System.Drawing.Point(363, 160);
-            this.tbInputToTNote.Name = "tbInputToTNote";
-            this.tbInputToTNote.ReadOnly = true;
-            this.tbInputToTNote.Size = new System.Drawing.Size(612, 15);
-            this.tbInputToTNote.TabIndex = 70;
-            this.tbInputToTNote.TabStop = false;
-            this.tbInputToTNote.Visible = false;
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "자산목적";
+            this.dataGridViewTextBoxColumn2.FillWeight = 125F;
+            this.dataGridViewTextBoxColumn2.HeaderText = "자산목적";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn2.Visible = false;
             // 
-            // tabChk
+            // Column2
             // 
-            this.tabChk.Location = new System.Drawing.Point(133, 11);
-            this.tabChk.Name = "tabChk";
-            this.tabChk.Size = new System.Drawing.Size(100, 21);
-            this.tabChk.TabIndex = 71;
-            this.tabChk.Visible = false;
+            this.Column2.HeaderText = "자산목적코드";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column2.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "회사구분";
+            this.dataGridViewTextBoxColumn3.HeaderText = "회사구분";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn3.Visible = false;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "회사구분코드";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column3.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "제품군구분";
+            this.dataGridViewTextBoxColumn4.FillWeight = 150F;
+            this.dataGridViewTextBoxColumn4.HeaderText = "제품군구분";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn4.Visible = false;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "제품군구분코드";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column4.Visible = false;
+            // 
+            // aa
+            // 
+            this.aa.HeaderText = "고유번호";
+            this.aa.Name = "aa";
+            this.aa.ReadOnly = true;
+            this.aa.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "제품코드";
+            this.dataGridViewTextBoxColumn6.HeaderText = "제품코드";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            this.dataGridViewTextBoxColumn6.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "제품명";
+            this.dataGridViewTextBoxColumn5.FillWeight = 150F;
+            this.dataGridViewTextBoxColumn5.HeaderText = "제품명";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            this.dataGridViewTextBoxColumn5.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "대여시간";
+            this.dataGridViewTextBoxColumn7.FillWeight = 110F;
+            this.dataGridViewTextBoxColumn7.HeaderText = "대여일";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            this.dataGridViewTextBoxColumn7.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // Column9
+            // 
+            this.Column9.HeaderText = "박스번호";
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            this.Column9.Visible = false;
+            // 
+            // Column10
+            // 
+            this.Column10.HeaderText = "박스명";
+            this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "NOTE";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "자산유형";
+            this.dataGridViewTextBoxColumn8.HeaderText = "자산유형";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            this.dataGridViewTextBoxColumn8.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn8.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.HeaderText = "자산유형코드";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
+            this.dataGridViewTextBoxColumn9.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn9.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "자산목적";
+            this.dataGridViewTextBoxColumn10.FillWeight = 125F;
+            this.dataGridViewTextBoxColumn10.HeaderText = "자산목적";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.ReadOnly = true;
+            this.dataGridViewTextBoxColumn10.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn10.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.HeaderText = "자산목적코드";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.ReadOnly = true;
+            this.dataGridViewTextBoxColumn11.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn11.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "회사구분";
+            this.dataGridViewTextBoxColumn12.HeaderText = "회사구분";
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            this.dataGridViewTextBoxColumn12.ReadOnly = true;
+            this.dataGridViewTextBoxColumn12.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn12.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.HeaderText = "회사구분코드";
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            this.dataGridViewTextBoxColumn13.ReadOnly = true;
+            this.dataGridViewTextBoxColumn13.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn13.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            this.dataGridViewTextBoxColumn14.DataPropertyName = "제품군구분";
+            this.dataGridViewTextBoxColumn14.FillWeight = 150F;
+            this.dataGridViewTextBoxColumn14.HeaderText = "제품군구분";
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            this.dataGridViewTextBoxColumn14.ReadOnly = true;
+            this.dataGridViewTextBoxColumn14.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn14.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn15
+            // 
+            this.dataGridViewTextBoxColumn15.HeaderText = "제품군구분코드";
+            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            this.dataGridViewTextBoxColumn15.ReadOnly = true;
+            this.dataGridViewTextBoxColumn15.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn15.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn16
+            // 
+            this.dataGridViewTextBoxColumn16.HeaderText = "고유번호";
+            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            this.dataGridViewTextBoxColumn16.ReadOnly = true;
+            this.dataGridViewTextBoxColumn16.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // dataGridViewTextBoxColumn17
+            // 
+            this.dataGridViewTextBoxColumn17.DataPropertyName = "제품코드";
+            this.dataGridViewTextBoxColumn17.HeaderText = "제품코드";
+            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
+            this.dataGridViewTextBoxColumn17.ReadOnly = true;
+            this.dataGridViewTextBoxColumn17.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // dataGridViewTextBoxColumn18
+            // 
+            this.dataGridViewTextBoxColumn18.DataPropertyName = "제품명";
+            this.dataGridViewTextBoxColumn18.FillWeight = 150F;
+            this.dataGridViewTextBoxColumn18.HeaderText = "제품명";
+            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
+            this.dataGridViewTextBoxColumn18.ReadOnly = true;
+            this.dataGridViewTextBoxColumn18.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // dataGridViewTextBoxColumn19
+            // 
+            this.dataGridViewTextBoxColumn19.DataPropertyName = "샘플대여시간";
+            this.dataGridViewTextBoxColumn19.FillWeight = 110F;
+            this.dataGridViewTextBoxColumn19.HeaderText = "샘플대여일";
+            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
+            this.dataGridViewTextBoxColumn19.ReadOnly = true;
+            this.dataGridViewTextBoxColumn19.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // Column11
+            // 
+            this.Column11.HeaderText = "박스번호";
+            this.Column11.Name = "Column11";
+            this.Column11.ReadOnly = true;
+            this.Column11.Visible = false;
+            // 
+            // Column12
+            // 
+            this.Column12.HeaderText = "박스명";
+            this.Column12.Name = "Column12";
+            this.Column12.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn20
+            // 
+            this.dataGridViewTextBoxColumn20.HeaderText = "NOTE";
+            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
+            this.dataGridViewTextBoxColumn20.ReadOnly = true;
+            this.dataGridViewTextBoxColumn20.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // FormHistory
             // 
@@ -883,6 +934,7 @@
             this.Controls.Add(this.SearchBtn);
             this.Controls.Add(this.tbProductCode);
             this.Controls.Add(this.tbProductName);
+            this.Font = new System.Drawing.Font("나눔고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormHistory";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -921,6 +973,40 @@
         private System.Windows.Forms.TextBox tbInputNote;
         private System.Windows.Forms.DataGridView dgSampleRentalList;
         private System.Windows.Forms.DataGridView dgOverallHistoryList;
+        private System.Windows.Forms.TextBox tbInputReturnDate;
+        private System.Windows.Forms.TextBox tbStatusName;
+        private System.Windows.Forms.TextBox tbInputToTNote;
+        public System.Windows.Forms.TextBox tabChk;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn aa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
@@ -936,36 +1022,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn 상태;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn32;
         private System.Windows.Forms.DataGridViewTextBoxColumn 반납시간;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn33;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn aa;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
-        private System.Windows.Forms.TextBox tbInputReturnDate;
-        private System.Windows.Forms.TextBox tbStatusName;
-        private System.Windows.Forms.TextBox tbInputToTNote;
-        public System.Windows.Forms.TextBox tabChk;
     }
 }

@@ -12,23 +12,14 @@ namespace Product_Manage_System
 {
     public partial class FormMain : Form
     {
-        FormRental childRentalForm = null;      // 대여 폼
-        FormReturn childReturnForm = null;      // 반납 폼
-        FormHistory childHistoryForm = null;    // 이력 폼
+        FormRental childRentalForm = null;      
+        FormReturn childReturnForm = null;      
+        FormHistory childHistoryForm = null;    
+        FormNewRegistration childNewRegistrationForm = null;
 
         public FormMain()
         {
             InitializeComponent();
-        }
-
-        //************************************************************************//
-        // Title     : 화면 권한관리                                              //
-        // Event     : 화면 권한관리 이벤트                                       //
-        // Parameter : Admin, User                                                //
-        //************************************************************************//
-        private void SetLeftMenuButton()
-        {
-
         }
 
         //************************************************************************//
@@ -38,13 +29,37 @@ namespace Product_Manage_System
         //************************************************************************//
         private void FormMain_Load(object sender, EventArgs e)
         {
+            lbUserName.Text = Common.strUSER_NAME;
+
+            SetLeftMenuButton();
+
             // Event     : 현제 선택된 왼쪽 메뉴 버튼 이미지 변경
             // Parameter : 메뉴 명
             //           , 이벤트 타입 (Hover, Leave)
             //           , 이벤트 호출 타입 (L : 폼 로드 시, B : 버튼 클릭 시)
-            LMButtonImageChange(tbMenuName.Text, "Hover", "L");
+            LMButtonImageChange(Common.strMENU_NAME, "Hover", "L");
 
-            ChildFormLoad(tbMenuName.Text);
+
+            ChildFormLoad(Common.strMENU_NAME);
+        }
+
+        //************************************************************************//
+        // Title     : 화면 권한관리                                              //
+        // Event     : 화면 권한관리 이벤트                                       //
+        // Parameter : Admin, User                                                //
+        //************************************************************************//
+        private void SetLeftMenuButton()
+        {
+            if (Common.strAUTHORITY_CODE == "Admin")
+            {
+                LMNewRegistration.Visible = true;
+                LMDisposal.Visible = true;
+            }
+            else 
+            {
+                LMNewRegistration.Visible = false;
+                LMDisposal.Visible = false;
+            }
         }
 
         //************************************************************************//
@@ -72,58 +87,58 @@ namespace Product_Manage_System
         //************************************************************************//
         private void LMHome_Click(object sender, EventArgs e)
         {
-            tbMenuName.Text = "LMHome";
+            Common.strMENU_NAME = "LMHome";
 
-            ChildFormLoad(tbMenuName.Text);
+            ChildFormLoad(Common.strMENU_NAME);
         }
 
         private void LMRental_Click(object sender, EventArgs e)
         {
-            tbMenuName.Text = "LMRental";
+            Common.strMENU_NAME = "LMRental";
 
-            ChildFormLoad(tbMenuName.Text);
+            ChildFormLoad(Common.strMENU_NAME);
         }
 
         private void LMReturn_Click(object sender, EventArgs e)
         {
-            tbMenuName.Text = "LMReturn";
+            Common.strMENU_NAME = "LMReturn";
 
-            ChildFormLoad(tbMenuName.Text);
+            ChildFormLoad(Common.strMENU_NAME);
         }
 
         private void LMRentalSample_Click(object sender, EventArgs e)
         {
-            tbMenuName.Text = "LMRentalSample";
+            Common.strMENU_NAME = "LMRentalSample";
 
-            ChildFormLoad(tbMenuName.Text);
+            ChildFormLoad(Common.strMENU_NAME);
         }
 
         private void LMReturnSample_Click(object sender, EventArgs e)
         {
-            tbMenuName.Text = "LMReturnSample";
+            Common.strMENU_NAME = "LMReturnSample";
 
-            ChildFormLoad(tbMenuName.Text);
+            ChildFormLoad(Common.strMENU_NAME);
         }
 
         private void LMHistory_Click(object sender, EventArgs e)
         {
-            tbMenuName.Text = "LMHistory";
+            Common.strMENU_NAME = "LMHistory";
 
-            ChildFormLoad(tbMenuName.Text);
+            ChildFormLoad(Common.strMENU_NAME);
         }
 
         private void LMNewRegistration_Click(object sender, EventArgs e)
         {
-            tbMenuName.Text = "LMNewRegistration";
+            Common.strMENU_NAME = "LMNewRegistration";
 
-            ChildFormLoad(tbMenuName.Text);
+            ChildFormLoad(Common.strMENU_NAME);
         }
 
         private void LMDisposal_Click(object sender, EventArgs e)
         {
-            tbMenuName.Text = "LMDisposal";
+            Common.strMENU_NAME = "LMDisposal";
 
-            ChildFormLoad(tbMenuName.Text);
+            ChildFormLoad(Common.strMENU_NAME);
         }
 
         //************************************************************************//
@@ -142,7 +157,6 @@ namespace Product_Manage_System
                 childRentalForm = new FormRental();
                 
                 childRentalForm.TopLevel = false;
-                childRentalForm.tbUserId.Text = this.tbUserId.Text;
 
                 SerialPortReset();
                 childRentalForm.Show();
@@ -156,7 +170,6 @@ namespace Product_Manage_System
                 childRentalForm = new FormRental();
                 
                 childRentalForm.TopLevel = false;
-                childRentalForm.tbUserId.Text = this.tbUserId.Text;
 
                 SerialPortReset();
                 childRentalForm.Show();
@@ -171,8 +184,6 @@ namespace Product_Manage_System
 
                 childReturnForm.TopLevel = false;
 
-                childReturnForm.tbUserId.Text = this.tbUserId.Text;
-
                 SerialPortReset();
                 childReturnForm.Show();
 
@@ -185,7 +196,7 @@ namespace Product_Manage_System
                 childRentalForm = new FormRental();
                 
                 childRentalForm.TopLevel = false;
-                childRentalForm.tbUserId.Text = this.tbUserId.Text;
+            
 
                 SerialPortReset();
                 childRentalForm.Show();
@@ -199,7 +210,7 @@ namespace Product_Manage_System
                 childRentalForm = new FormRental();
                 
                 childRentalForm.TopLevel = false;
-                childRentalForm.tbUserId.Text = this.tbUserId.Text;
+              
 
                 SerialPortReset();
                 childRentalForm.Show();
@@ -223,16 +234,16 @@ namespace Product_Manage_System
             // 신규등록 폼 호출
             else if (_menuName == "LMNewRegistration")
             {
-                childRentalForm = new FormRental();
-                
-                childRentalForm.TopLevel = false;
-                childRentalForm.tbUserId.Text = this.tbUserId.Text;
+                childNewRegistrationForm = new FormNewRegistration();
+
+                childNewRegistrationForm.TopLevel = false;
+                childNewRegistrationForm.tbUserId.Text = this.tbUserId.Text;
 
                 SerialPortReset();
-                childRentalForm.Show();
+                childNewRegistrationForm.Show();
 
                 this.mainPanel.Controls.Clear();
-                this.mainPanel.Controls.Add(childRentalForm);
+                this.mainPanel.Controls.Add(childNewRegistrationForm);
             }
             // 폐기 폼 호출
             else if (_menuName == "LMDisposal")
@@ -240,7 +251,7 @@ namespace Product_Manage_System
                 childRentalForm = new FormRental();
                 
                 childRentalForm.TopLevel = false;
-                childRentalForm.tbUserId.Text = this.tbUserId.Text;
+              
 
                 SerialPortReset();
                 childRentalForm.Show();
@@ -250,7 +261,7 @@ namespace Product_Manage_System
             }
 
             LMButtonImageClear();
-            LMButtonImageChange(tbMenuName.Text, "Hover", "L");
+            LMButtonImageChange(Common.strMENU_NAME, "Hover", "L");
         }
 
         private void ChildFormClose(string _menuName)
@@ -309,9 +320,9 @@ namespace Product_Manage_System
             // 신규등록 폼 호출
             if (_menuName != "LMNewRegistration")
             {
-                if (childRentalForm != null)
+                if (childNewRegistrationForm != null)
                 {
-                    childRentalForm.Close();
+                    childNewRegistrationForm.Close();
                 }
             }
             // 폐기 폼 호출
@@ -347,7 +358,7 @@ namespace Product_Manage_System
             {
                 Image img = Image.FromFile(@"Image\\" + _menuName + _eventtype + ".jpg");
 
-                if (_menuName == tbMenuName.Text && _eventtype == "Leave" && _loadChk == "B")
+                if (_menuName == Common.strMENU_NAME && _eventtype == "Leave" && _loadChk == "B")
                 {
                     return;
                 }
